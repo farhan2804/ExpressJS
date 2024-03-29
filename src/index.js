@@ -3,8 +3,9 @@ const app = express();
 const path=require('path');
 const port = 5000;
 const staticPath=path.join(__dirname,"../public");
+const tempPath=path.join(__dirname,"../template")
 app.set('view engine', 'hbs');
-
+app.set('views',tempPath);
 app.use(express.static(staticPath));
 
 //the below code is for template engines
